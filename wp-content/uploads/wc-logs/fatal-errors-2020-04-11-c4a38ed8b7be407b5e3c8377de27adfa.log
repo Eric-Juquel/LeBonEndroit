@@ -1,0 +1,9 @@
+2020-04-11T07:02:09+00:00 CRITICAL Uncaught Error: Undefined class constant 'QUEUE_GROUP' in C:\wamp64\www\Wordpress\LeBonEndroit\wp-content\plugins\woocommerce-admin\includes\wc-admin-update-functions.php:70
+Stack trace:
+#0 C:\wamp64\www\Wordpress\LeBonEndroit\wp-content\plugins\woocommerce\includes\class-wc-install.php(200): wc_admin_update_0251_remove_unsnooze_action()
+#1 C:\wamp64\www\Wordpress\LeBonEndroit\wp-includes\class-wp-hook.php(288): WC_Install::run_update_callback('wc_admin_update...')
+#2 C:\wamp64\www\Wordpress\LeBonEndroit\wp-includes\class-wp-hook.php(312): WP_Hook->apply_filters('', Array)
+#3 C:\wamp64\www\Wordpress\LeBonEndroit\wp-includes\plugin.php(544): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\Wordpress\LeBonEndroit\wp-content\plugins\mailchimp-for-woocommerce\includes\vendor\action-scheduler\classes\actions\ActionScheduler_Action.php(22): do_action_ref_array('woocommerce_run...', Array)
+#5 C:\wamp64\www\Wordpress\LeBonEndroit\wp-content\plugins\mailchimp-for-woocommerce\includes\vendor\action-scheduler\classes\abstract dans C:\wamp64\www\Wordpress\LeBonEndroit\wp-content\plugins\woocommerce-admin\includes\wc-admin-update-functions.php à la ligne 70
+
