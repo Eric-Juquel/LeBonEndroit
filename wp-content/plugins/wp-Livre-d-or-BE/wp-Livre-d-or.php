@@ -90,4 +90,4 @@ if (!class_exists('AlecadddPlugin')) {
 
   // deactivation
   register_deactivation_hook(__FILE__, array($livreDOrPlugin, 'deactivate'));
-}
+} 
