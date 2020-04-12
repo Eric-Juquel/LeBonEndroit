@@ -49,26 +49,24 @@ define('PLUGIN_PATH', plugin_dir_path(__FILE__));
 define('PLUGIN_URL', plugin_dir_url(__FILE__));
 define('PLUGIN', plugin_basename(__FILE__));
 
-use Inc\Base\Activate;
-use Inc\Base\Deactivate;
-
 /**
  * The code that runs during plugin activation
  */
 function activate_livredor_plugin()
 {
-  Activate::activate();
+  Inc\Base\Activate::activate();
 }
+
+register_activation_hook(__FILE__, 'activate_livredor_plugin');
 
 /**
  * The code that runs during deactivation
  */
 function deactivate_livredor_plugin()
 {
-  Deactivate::deactivate();
+  Inc\Base\Deactivate::deactivate();
 }
 
-register_activation_hook(__FILE__, 'activate_livredor_plugin');
 register_deactivation_hook(__FILE__, 'deactivate_livredor_plugin');
 
 /**
