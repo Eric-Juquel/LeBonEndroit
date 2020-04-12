@@ -48,14 +48,14 @@ final class Init
 
 
 
-// if (!class_exists('AlecadddPlugin')) {
+
 //   class LivreDOrPlugin
 //   {
 //     public $plugin;
 
 //     function __construct()
 //     {
-//       $this->plugin = plugin_basename(__FILE__);
+
 //       $this->create_post_type();
 //     }
 //     protected function create_post_type()
