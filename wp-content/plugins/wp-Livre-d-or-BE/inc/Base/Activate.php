@@ -4,9 +4,9 @@
  * @package BonEndroitLivreOrPlugin
  */
 
+namespace Inc\Base;
 
-
-class LivreDOrActivate {
+class Activate {
 
   public static function activate() {
    flush_rewrite_rules();

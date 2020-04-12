@@ -33,95 +33,47 @@ Copyright 2005-2015 Automattic, Inc.
 */
 
 
-
+// If this file is called directly, abort !!
 if (!function_exists('add_action')) {
   echo 'Hey, you can\'t access this file !';
   exit;
 }
 
-if (!class_exists('AlecadddPlugin')) {
-  class LivreDOrPlugin
-  {
-    public $plugin;
+// Require once the Composer Autoload
+if (file_exists(dirname(__FILE__) . '/vendor/autoload.php')) {
+  require_once dirname(__FILE__) . '/vendor/autoload.php';
+}
 
-    function __construct()
-    {
-      $this->plugin = plugin_basename(__FILE__);
-      $this->create_post_type();
-    }
-    protected function create_post_type()
-    {
-      add_action('init', array($this, 'custom_post_type'));
-    }
+// Define CONSTANT
+define('PLUGIN_PATH', plugin_dir_path(__FILE__));
+define('PLUGIN_URL', plugin_dir_url(__FILE__));
+define('PLUGIN', plugin_basename(__FILE__));
 
-    // function activate()
-    // {
-    //   $this->custom_post_type();
-    //   flush_rewrite_rules();
-    // }
+use Inc\Base\Activate;
+use Inc\Base\Deactivate;
 
+/**
+ * The code that runs during plugin activation
+ */
+function activate_livredor_plugin()
+{
+  Activate::activate();
+}
 
+/**
+ * The code that runs during deactivation
+ */
+function deactivate_livredor_plugin()
+{
+  Deactivate::deactivate();
+}
 
-    function register()
-    {
-      add_action('admin_enqueue_scripts', array($this, 'enqueue'));
+register_activation_hook(__FILE__, 'activate_livredor_plugin');
+register_deactivation_hook(__FILE__, 'deactivate_livredor_plugin');
 
-      add_action('admin_menu', array($this, 'add_admin_pages'));
-
-
-
-      add_filter("plugin_action_links_$this->plugin"  , array($this, 'settings_link'));
-    }
-
-    public function settings_link( $links )
-    {
-      $settings_link = '<a href="admin.php?page=livredor_plugin">Settings</a>';
-      array_push( $links, $settings_link );
-      return $links;
-    }
-
-    public function add_admin_pages()
-    { 
-      add_menu_page(
-        'Livred\'Or Plugin',
-        'Livre d\'Or',
-        'manage_options',
-        'livredor_plugin',
-        array($this, 'admin_index'),
-        'dashicons-book-alt',
-        110
-      );
-    }
-
-    public function admin_index()
-    {
-      require_once plugin_dir_path(__FILE__) . 'templates/admin.php';
-      
-    }
-
-    function custom_post_type()
-    {
-      register_post_type('livredor', ['public' => true, 'label' => 'Livre d\'Or']);
-    }
-
-    function enqueue()
-    {
-      // enqueue all our scripts
-      wp_enqueue_style('mypluginstyle', plugins_url('./assets/mystyle.css', __FILE__));
-      wp_enqueue_script('mypluginscript', plugins_url('./assets/myscript.js', __FILE__));
-    }
-  }
-
-
-  $livreDOrPlugin = new LivreDOrPlugin();
-  $livreDOrPlugin->register();
-
-
-  // activation
-  require_once plugin_dir_path(__FILE__) . 'inc/livredor-plugin-activate.php';
-  register_activation_hook(__FILE__, array('LivreDOrActivate', 'activate'));
-
-  // deactivation
-  require_once plugin_dir_path(__FILE__) . 'inc/livredor-plugin-deactivate.php';
-  register_deactivation_hook(__FILE__, array('LivreDOrDeactivate', 'deactivate'));
+/**
+ * Initialize all the core classes of the plugin
+ */
+if (class_exists('Inc\\Init')) {
+  Inc\Init::register_services();
 }

@@ -1,0 +1,17 @@
+{
+    "name": "eric/wp-livre-d-or-be",
+    "description": "starter plugin exemple",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Eric J.",
+            "email": "ejuquel@yahoo.fr"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {"Inc\\": "./inc"}
+    }
+}
