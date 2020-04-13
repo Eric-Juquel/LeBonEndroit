@@ -1,0 +1,56 @@
+2020-04-13T08:24:47+00:00 CRITICAL Uncaught Error: Call to a member function execute() on bool in C:\wamp64\www\Wordpress\LeBonEndroit\wp-content\plugins\livredorericJ\LivreOrDB.php:31
+Stack trace:
+#0 C:\wamp64\www\Wordpress\LeBonEndroit\wp-content\plugins\livredorericJ\Livredor-plugin.php(44): LivreOrDB::install()
+#1 C:\wamp64\www\Wordpress\LeBonEndroit\wp-includes\class-wp-hook.php(287): LivreOrPlugin->activate(false)
+#2 C:\wamp64\www\Wordpress\LeBonEndroit\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#3 C:\wamp64\www\Wordpress\LeBonEndroit\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\Wordpress\LeBonEndroit\wp-admin\includes\plugin.php(690): do_action('activate_livred...', false)
+#5 C:\wamp64\www\Wordpress\LeBonEndroit\wp-admin\plugins.php(44): activate_plugin('livredorericJ/L...', 'http://localhos...', false)
+#6 {main}
+  thrown dans C:\wamp64\www\Wordpress\LeBonEndroit\wp-content\plugins\livredorericJ\LivreOrDB.php à la ligne 31
+
+2020-04-13T08:24:53+00:00 CRITICAL Uncaught Error: Call to a member function execute() on bool in C:\wamp64\www\Wordpress\LeBonEndroit\wp-content\plugins\livredorericJ\LivreOrDB.php:31
+Stack trace:
+#0 C:\wamp64\www\Wordpress\LeBonEndroit\wp-content\plugins\livredorericJ\Livredor-plugin.php(44): LivreOrDB::install()
+#1 C:\wamp64\www\Wordpress\LeBonEndroit\wp-includes\class-wp-hook.php(287): LivreOrPlugin->activate('')
+#2 C:\wamp64\www\Wordpress\LeBonEndroit\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#3 C:\wamp64\www\Wordpress\LeBonEndroit\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\Wordpress\LeBonEndroit\wp-admin\plugins.php(179): do_action('activate_livred...')
+#5 {main}
+  thrown dans C:\wamp64\www\Wordpress\LeBonEndroit\wp-content\plugins\livredorericJ\LivreOrDB.php à la ligne 31
+
+2020-04-13T08:24:53+00:00 CRITICAL Uncaught Error: Call to a member function execute() on bool in C:\wamp64\www\Wordpress\LeBonEndroit\wp-content\plugins\livredorericJ\LivreOrDB.php:31
+Stack trace:
+#0 C:\wamp64\www\Wordpress\LeBonEndroit\wp-content\plugins\livredorericJ\Livredor-plugin.php(44): LivreOrDB::install()
+#1 C:\wamp64\www\Wordpress\LeBonEndroit\wp-includes\class-wp-hook.php(287): LivreOrPlugin->activate('')
+#2 C:\wamp64\www\Wordpress\LeBonEndroit\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#3 C:\wamp64\www\Wordpress\LeBonEndroit\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\Wordpress\LeBonEndroit\wp-admin\plugins.php(179): do_action('activate_livred...')
+#5 {main}
+  thrown dans C:\wamp64\www\Wordpress\LeBonEndroit\wp-content\plugins\livredorericJ\LivreOrDB.php à la ligne 31
+
+2020-04-13T10:06:54+00:00 CRITICAL Uncaught Error: Call to a member function install() on null in C:\wamp64\www\Wordpress\LeBonEndroit\wp-content\plugins\livredorericJ\LivreOrPlugin.php:71
+Stack trace:
+#0 C:\wamp64\www\Wordpress\LeBonEndroit\wp-includes\class-wp-hook.php(287): LivreOrPlugin->create_database('')
+#1 C:\wamp64\www\Wordpress\LeBonEndroit\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 C:\wamp64\www\Wordpress\LeBonEndroit\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\Wordpress\LeBonEndroit\wp-settings.php(540): do_action('init')
+#4 C:\wamp64\www\Wordpress\LeBonEndroit\wp-config.php(96): require_once('C:\\wamp64\\www\\W...')
+#5 C:\wamp64\www\Wordpress\LeBonEndroit\wp-load.php(37): require_once('C:\\wamp64\\www\\W...')
+#6 C:\wamp64\www\Wordpress\LeBonEndroit\wp-cron.php(44): require_once('C:\\wamp64\\www\\W...')
+#7 {main}
+  thrown dans C:\wamp64\www\Wordpress\LeBonEndroit\wp-content\plugins\livredorericJ\LivreOrPlugin.php à la ligne 71
+
+2020-04-13T10:06:57+00:00 CRITICAL Uncaught Error: Call to a member function install() on null in C:\wamp64\www\Wordpress\LeBonEndroit\wp-content\plugins\livredorericJ\LivreOrPlugin.php:71
+Stack trace:
+#0 C:\wamp64\www\Wordpress\LeBonEndroit\wp-includes\class-wp-hook.php(287): LivreOrPlugin->create_database('')
+#1 C:\wamp64\www\Wordpress\LeBonEndroit\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 C:\wamp64\www\Wordpress\LeBonEndroit\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\Wordpress\LeBonEndroit\wp-settings.php(540): do_action('init')
+#4 C:\wamp64\www\Wordpress\LeBonEndroit\wp-config.php(96): require_once('C:\\wamp64\\www\\W...')
+#5 C:\wamp64\www\Wordpress\LeBonEndroit\wp-load.php(37): require_once('C:\\wamp64\\www\\W...')
+#6 C:\wamp64\www\Wordpress\LeBonEndroit\wp-admin\admin.php(34): require_once('C:\\wamp64\\www\\W...')
+#7 C:\wamp64\www\Wordpress\LeBonEndroit\wp-admin\plugins.php(10): require_once('C:\\wamp64\\www\\W...')
+#8 {main}
+  thrown dans C:\wamp64\www\Wordpress\LeBonEndroit\wp-content\plugins\livredorericJ\LivreOrPlugin.php à la ligne 71
+

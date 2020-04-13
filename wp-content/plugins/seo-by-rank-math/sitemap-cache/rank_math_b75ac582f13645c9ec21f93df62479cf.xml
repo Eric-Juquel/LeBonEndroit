@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//localhost/Wordpress/LeBonEndroit/main-sitemap.xsl"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<sitemap>
+		<loc>http://localhost/Wordpress/LeBonEndroit/page-sitemap.xml</loc>
+		<lastmod>2020-04-13T17:48:11+02:00</lastmod>
+	</sitemap>
+	<sitemap>
+		<loc>http://localhost/Wordpress/LeBonEndroit/product-sitemap.xml</loc>
+		<lastmod>2020-01-12T15:02:50+01:00</lastmod>
+	</sitemap>
+</sitemapindex>
